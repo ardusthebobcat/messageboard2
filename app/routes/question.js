@@ -20,7 +20,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     addAnswer: function(question, params) {
-      debugger;
       var newAnswer = this.store.createRecord('answer', params)
       var baseQuestion = question;
       baseQuestion.get('answers').addObject(newAnswer);

@@ -1,4 +1,9 @@
-{{#link-to 'question' question.id}}{{question.content}}{{/link-to}} <br>-{{question.author}}
+<h4 class="ui header">
+  {{#link-to 'question' question.id}}
+    {{question.content}}
+  {{/link-to}}
+  <br>-{{question.author}}
+</h4>
 
 {{#if additional}}
   <br>Additional Notes: <br>
