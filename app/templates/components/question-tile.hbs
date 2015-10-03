@@ -1,0 +1,13 @@
+{{#link-to 'question' question.id}}{{question.content}}{{/link-to}} <br>-{{question.author}}
+
+{{#if additional}}
+  <br>Additional Notes: <br>
+  {{question.notes}}
+
+  {{add-answer question=question addAnswer="addAnswer"}}
+
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+
+{{/if}}

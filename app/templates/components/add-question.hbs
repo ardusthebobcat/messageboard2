@@ -1,0 +1,10 @@
+{{#if addQuestion}}
+  <form>
+    {{input value=content placeholder="your question" id=content}}
+    {{input value=author placeholder="your name" id=author}}
+    {{input value=notes placeholder="additional notes" id=notes}}
+    <button {{action 'save'}}>Confirm</button>
+  </form>
+{{else}}
+  <button {{action 'showAddQuestion'}}> Ask a Question</button>
+{{/if}}

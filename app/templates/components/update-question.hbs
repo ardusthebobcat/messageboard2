@@ -1,0 +1,14 @@
+{{#if updateQuestionForm}}
+  <form>
+  {{input value=question.content id=content placeholder=question.content}}
+
+  {{input value=question.author id=author placeholder=question.author}}
+
+  {{input value=question.notes id=notes placeholder=question.notes}}
+
+  <button {{action 'updateQuestion' question}}>Confirm Update</button>
+  </form>
+{{else}}
+  <button {{action 'showUpdateQuestionForm'}}>Update Question</button>
+  <button {{action 'deleteQuestion' question}}>Delete Question</button>
+{{/if}}
